@@ -6,6 +6,7 @@ import environment from "../environment";
 import { UserRoutes } from "../routes/user";
 import { ActivityRoutes } from "../routes/activity";
 import { CommentRoutes } from "../routes/comment";
+import { LocationRoutes } from "../routes/location";
 
 class App {
 
@@ -17,6 +18,7 @@ class App {
    private user_routes: UserRoutes = new UserRoutes();
    private activity_routes: ActivityRoutes = new ActivityRoutes();
    private comment_routes: CommentRoutes = new CommentRoutes();
+   private location_routes: LocationRoutes = new LocationRoutes();
 
 
    constructor() {
@@ -26,6 +28,7 @@ class App {
       this.user_routes.route(this.app);
       this.activity_routes.route(this.app);
       this.comment_routes.route(this.app);
+      this.location_routes.route(this.app);
    }
 
    private config(): void {
